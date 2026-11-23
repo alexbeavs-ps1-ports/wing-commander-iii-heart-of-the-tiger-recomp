@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Wing Commander III - Heart of the Tiger"
+id = "SLUS-00019"
+players = 1
+exe = "disc/SLUS_000.19"
+disc = "disc/Wing Commander III - Heart of the Tiger (USA) (Disc 1).cue"
+discs = ["disc/Wing Commander III - Heart of the Tiger (USA) (Disc 1).cue", "disc/Wing Commander III - Heart of the Tiger (USA) (Disc 2).cue", "disc/Wing Commander III - Heart of the Tiger (USA) (Disc 3).cue", "disc/Wing Commander III - Heart of the Tiger (USA) (Disc 4).cue"]
+disc_serials = ["SLUS-00019", "SLUS-00134", "SLUS-00135", "SLUS-00136"]
+load_address = "0x80010000"
+entry_pc = "0x8004B708"
+text_size = "0x00063000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Wing Commander III - Heart of the Tiger (USA) (Disc 1).bin"
+cue_name = "Wing Commander III - Heart of the Tiger (USA) (Disc 1).cue"
+boot_exe = "SLUS_000.19"
+known_sizes = [721574784]
+known_md5 = [
+  "77f0fe66a2ffb509798554d7f7eaf350",
+]
+known_sha1 = [
+  "a2cdd388b286ef6d2b2ad303c3488c43af84c517",
+]
+known_crc32 = [
+  "e2bdde1b",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Wing Commander III - Heart of the Tiger Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "6b7fe9ebee9b04970edd1d7cc1d4f576b3838187ab4f1bb195bcb0a4531ab7a6"

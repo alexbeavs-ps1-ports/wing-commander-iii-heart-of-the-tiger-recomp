@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Wing Commander III - Heart of the Tiger",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "wing-commander-iii-heart-of-the-tiger-recomp",
+  "original": {
+    "region": "USA",
+    "serial": "SLUS-00019"
+  }
+}

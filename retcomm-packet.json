@@ -1,0 +1,125 @@
+{
+  "format_version": 1,
+  "id": "wing-commander-iii-heart-of-the-tiger-psx",
+  "name": "Wing Commander III - Heart of the Tiger",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "wing-commander-iii-heart-of-the-tiger-recomp",
+  "rom_identity": {
+    "crc32": [
+      "e2bdde1b",
+      "91d852f2",
+      "a5bf2dbc",
+      "267dd39d"
+    ],
+    "md5": [
+      "77f0fe66a2ffb509798554d7f7eaf350",
+      "53fcde28a535a37e42fe00530abbfe29",
+      "c799858563e26fd341d095897fef4f85",
+      "7b77ea89b2a982a0c8bfd975fbf8ddde"
+    ],
+    "sha1": [
+      "a2cdd388b286ef6d2b2ad303c3488c43af84c517",
+      "4b269d51acfaaabd5d242ff808fd3b53cb8f55b6",
+      "983f0ea1c66d5ba12ce805c3ffdc504b8d0e6b37",
+      "cac3864654ee1488d92655d3d458d30959981b0b"
+    ],
+    "disc_serials": [
+      "SLUS-00019",
+      "SLUS-00134",
+      "SLUS-00135",
+      "SLUS-00136"
+    ],
+    "sizes": [
+      721574784,
+      751028880,
+      734132112,
+      721370160
+    ],
+    "filenames": [
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 1).cue",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 1).bin",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 2).cue",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 2).bin",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 3).cue",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 3).bin",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 4).cue",
+      "Wing Commander III - Heart of the Tiger (USA) (Disc 4).bin"
+    ],
+    "track_counts": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "disc_fps": [
+      "6b7fe9ebee9b04970edd1d7cc1d4f576b3838187ab4f1bb195bcb0a4531ab7a6",
+      "d1a0980e24866d27b5f6537cad1db4aef41701a5f17d2f3e48722a5315ad51a7",
+      "804f9fce807f1b5335ce559e839c0cd972f8800e5c6c2c7b5d14fe0c19c23117",
+      "631460f4e8127c317e5a5f96e43e92586fb98ee6150a3a127daf0a0015b6f358"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/wing-commander-iii-heart-of-the-tiger-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "wing-commander-iii-heart-of-the-tiger-*-windows-x64.zip",
+      "linux-x64": "wing-commander-iii-heart-of-the-tiger-*-linux-x64.zip",
+      "macos-arm64": "wing-commander-iii-heart-of-the-tiger-*-macos-arm64.zip",
+      "macos-x64": "wing-commander-iii-heart-of-the-tiger-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "wing_commander_iii_heart_of_the_tiger.exe",
+    "linux": "wing_commander_iii_heart_of_the_tiger",
+    "macos": "wing_commander_iii_heart_of_the_tiger"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/wing-commander-iii-heart-of-the-tiger-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
